@@ -1,0 +1,10 @@
+{
+  "MarekNarty": {
+    "password": "MarekNarty2012MarcusSchie",
+    "isAdmin": true,
+    "email": "mareknartymngame@gmail.com",
+    "createdAt": "2023-01-01T00:00:00.000Z",
+    "secretQuestion": "Jakie jest moje imię?",
+    "secretAnswer": "Marcus"
+  }
+}
