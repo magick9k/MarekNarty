@@ -37,13 +37,6 @@
         </div>
     </div>
 
-    <!-- Admin Panel Access Button -->
-    <div class="admin-access-btn">
-        <button class="admin-icon-btn" onclick="showAdminLogin()" title="Panel Admina">
-            <i class="fas fa-user-shield"></i>
-        </button>
-    </div>
-
     <!-- Loading Screen -->
     <div id="loading-screen">
         <div class="loading-content">
@@ -215,9 +208,6 @@
                         <button class="game-btn play-btn" onclick="window.open('https://magick9k.github.io/fnuf/', '_blank')">
                             <i class="fas fa-play"></i> <span data-i18n="games.button.play">Przejdź do strony</span>
                         </button>
-                        <button class="game-btn comments-btn" onclick="openComments('fnuf')">
-                            <i class="fas fa-comments"></i> <span data-i18n="games.button.comments">Komentarze</span>
-                        </button>
                     </div>
                 </div>
                 
@@ -259,23 +249,7 @@
                         <button class="game-btn download-btn" onclick="window.open('https://mega.nz/folder/KU81yQ6J#deJcN-jt7ykokHKPwcT7oQ', '_blank')">
                             <i class="fas fa-download"></i> <span data-i18n="games.button.download">Pobierz</span>
                         </button>
-                        <button class="game-btn comments-btn" onclick="openComments('sandbox')">
-                            <i class="fas fa-comments"></i> <span data-i18n="games.button.comments">Komentarze</span>
-                        </button>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Personal Comments Section -->
-            <div class="personal-comments-section">
-                <div class="section-header">
-                    <h3><i class="fas fa-comment-dots"></i> <span data-i18n="comments.aboutMe">Komentarze o mnie</span></h3>
-                    <button class="btn-secondary" onclick="openPersonalComments()">
-                        <i class="fas fa-plus"></i> <span data-i18n="comments.add">Dodaj komentarz</span>
-                    </button>
-                </div>
-                <div class="comments-list" id="personal-comments-list">
-                    <!-- Komentarze będą ładowane dynamicznie -->
                 </div>
             </div>
             
@@ -643,167 +617,6 @@
             <p class="footer-note" data-i18n="footer.note">Strona stworzona z ❤️ przez Marcusa</p>
         </div>
     </footer>
-
-    <!-- ===== MODALE KOMENTARZY ===== -->
-    
-    <!-- Modal dla komentarzy gier -->
-    <div id="comments-modal" class="modal">
-        <div class="modal-content comments-modal">
-            <div class="modal-header">
-                <h3><i class="fas fa-comments"></i> <span class="comments-title">Komentarze</span></h3>
-                <button class="close-modal" onclick="closeCommentsModal()">&times;</button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="comments-section">
-                    <div class="comments-list" id="comments-list">
-                        <!-- Komentarze będą tu się pojawiać -->
-                    </div>
-                    
-                    <div class="add-comment">
-                        <div class="user-info">
-                            <div class="avatar-small">👤</div>
-                            <input type="text" 
-                                   id="comment-nick" 
-                                   placeholder="Twój nick (max 20 znaków)"
-                                   maxlength="20">
-                        </div>
-                        <textarea id="comment-text" 
-                                  placeholder="Napisz komentarz... (max 500 znaków)"
-                                  maxlength="500"></textarea>
-                        <div class="comment-controls">
-                            <button class="btn-secondary" onclick="closeCommentsModal()">
-                                <i class="fas fa-times"></i> <span data-i18n="comments.cancel">Anuluj</span>
-                            </button>
-                            <button class="btn-primary" onclick="postComment()">
-                                <i class="fas fa-paper-plane"></i> <span data-i18n="comments.post">Dodaj komentarz</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal dla komentarzy o mnie -->
-    <div id="personal-comments-modal" class="modal">
-        <div class="modal-content comments-modal">
-            <div class="modal-header">
-                <h3><i class="fas fa-user-comment"></i> <span data-i18n="comments.aboutMe">Komentarze o mnie</span></h3>
-                <button class="close-modal" onclick="closePersonalCommentsModal()">&times;</button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="comments-section">
-                    <div class="comments-list" id="personal-modal-comments-list">
-                        <!-- Komentarze będą tu się pojawiać -->
-                    </div>
-                    
-                    <div class="add-comment">
-                        <div class="user-info">
-                            <div class="avatar-small">👤</div>
-                            <input type="text" 
-                                   id="personal-comment-nick" 
-                                   placeholder="Twój nick (max 20 znaków)"
-                                   maxlength="20">
-                        </div>
-                        <textarea id="personal-comment-text" 
-                                  placeholder="Co myślisz o mnie i moich grach? (max 500 znaków)"
-                                  maxlength="500"></textarea>
-                        <div class="comment-controls">
-                            <button class="btn-secondary" onclick="closePersonalCommentsModal()">
-                                <i class="fas fa-times"></i> <span data-i18n="comments.cancel">Anuluj</span>
-                            </button>
-                            <button class="btn-primary" onclick="postPersonalComment()">
-                                <i class="fas fa-paper-plane"></i> <span data-i18n="comments.post">Dodaj komentarz</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal dla panelu admina -->
-    <div id="admin-modal" class="modal">
-        <div class="modal-content admin-modal">
-            <div class="modal-header admin">
-                <h3><i class="fas fa-crown"></i> <span data-i18n="admin.title">Panel Admina</span></h3>
-                <button class="close-modal" onclick="closeAdminModal()">&times;</button>
-            </div>
-            
-            <div class="modal-body">
-                <div class="admin-section">
-                    <h4><i class="fas fa-comment"></i> <span data-i18n="admin.manageComments">Zarządzaj komentarzami</span></h4>
-                    <div class="admin-controls">
-                        <button class="admin-btn" onclick="loadAdminComments('fnuf')">
-                            <i class="fas fa-ghost"></i> <span data-i18n="games.fnuf.short">FNUF</span>
-                        </button>
-                        <button class="admin-btn" onclick="loadAdminComments('sandbox')">
-                            <i class="fas fa-cubes"></i> <span data-i18n="games.sandbox.short">Sandbox</span>
-                        </button>
-                        <button class="admin-btn" onclick="loadAdminComments('personal')">
-                            <i class="fas fa-user"></i> <span data-i18n="comments.aboutMe.short">O mnie</span>
-                        </button>
-                    </div>
-                    
-                    <div class="admin-comments-list" id="admin-comments-list">
-                        <!-- Tu będą komentarze do moderacji -->
-                    </div>
-                </div>
-                
-                <div class="admin-section">
-                    <h4><i class="fas fa-cog"></i> <span data-i18n="admin.settings">Ustawienia</span></h4>
-                    <div class="admin-settings">
-                        <button class="admin-btn logout-btn" onclick="logoutAdmin()">
-                            <i class="fas fa-sign-out-alt"></i> <span data-i18n="admin.logout">Wyloguj się</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal logowania admina -->
-    <div id="admin-login-modal" class="modal">
-        <div class="modal-content login-modal">
-            <div class="modal-header">
-                <h3><i class="fas fa-lock"></i> <span data-i18n="admin.login">Logowanie Admina</span></h3>
-            </div>
-            
-            <div class="modal-body">
-                <div class="login-form">
-                    <div class="form-group">
-                        <label for="admin-password"><i class="fas fa-key"></i> <span data-i18n="admin.password">Hasło Admina:</span></label>
-                        <input type="password" 
-                               id="admin-password" 
-                               placeholder="Wprowadź hasło"
-                               autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <label for="admin-secret-key"><i class="fas fa-user-secret"></i> <span data-i18n="admin.secretKey">Sekretny Klucz:</span></label>
-                        <input type="password" 
-                               id="admin-secret-key" 
-                               placeholder="Wprowadź sekretny klucz"
-                               autocomplete="off">
-                    </div>
-                    
-                    <div class="login-controls">
-                        <button class="btn-secondary" onclick="closeAdminLoginModal()">
-                            <i class="fas fa-times"></i> <span data-i18n="admin.cancel">Anuluj</span>
-                        </button>
-                        <button class="btn-primary" onclick="loginAdmin()">
-                            <i class="fas fa-sign-in-alt"></i> <span data-i18n="admin.loginBtn">Zaloguj</span>
-                        </button>
-                    </div>
-                    
-                    <div class="login-info">
-                        <p><i class="fas fa-info-circle"></i> <span data-i18n="admin.loginInfo">Tylko właściciel strony ma dostęp do tego panelu.</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Audio Elements -->
     <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3" preload="auto"></audio>
