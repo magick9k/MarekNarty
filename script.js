@@ -19,6 +19,7 @@ const translations = {
         "nav.dontClick": "NIE KLIKAJ!",
         "nav.games": "Moje Gry",
         "nav.social": "Social Media",
+        "nav.setup": "Mój Setup",
         
         // Status
         "status.online": "Online",
@@ -94,12 +95,12 @@ const translations = {
         "social.youtube.description": "Gameplaye, poradniki, rozwój moich gier",
         "social.github.description": "Kod źródłowy moich projektów",
         "social.email.description": "Kontakt biznesowy i współpraca",
-        "social.setup.title": "Mój Setup",
-        "social.setup.description": "Specyfikacja mojego sprzętu",
-        "social.setup.link": "Zobacz szczegóły",
         "social.comingSoon.title": "Wkrótce więcej!",
         "social.comingSoon.description": "Nowe social media w przyszłości...",
         "social.comingSoon.link": "Stay tuned!",
+        "social.more.title": "Więcej...",
+        "social.more.description": "Nowe platformy wkrótce!",
+        "social.more.link": "Coming soon",
         
         // Setup
         "setup.title": "MÓJ SETUP",
@@ -130,6 +131,11 @@ const translations = {
         "setup.note.title": "Informacja:",
         "setup.note.text": "Ten setup pozwala mi komfortowo tworzyć gry i streamować. Unity 6000.2.7f2 to specjalna wersja edukacyjna, z której korzystam do rozwoju MN Sandbox.",
         
+        "setup.performance.title": "Wydajność",
+        "setup.performance.gaming": "Gaming:",
+        "setup.performance.development": "Development:",
+        "setup.performance.streaming": "Streaming:",
+        
         // Party
         "party.title": "IMPREZA!",
         "party.subtitle": "MÓWIŁEM ŻEBY NIE KLIKAĆ!",
@@ -159,6 +165,7 @@ const translations = {
         "nav.dontClick": "DON'T CLICK!",
         "nav.games": "My Games",
         "nav.social": "Social Media",
+        "nav.setup": "My Setup",
         
         // Status
         "status.online": "Online",
@@ -234,12 +241,12 @@ const translations = {
         "social.youtube.description": "Gameplays, tutorials, development of my games",
         "social.github.description": "Source code of my projects",
         "social.email.description": "Business contact and collaboration",
-        "social.setup.title": "My Setup",
-        "social.setup.description": "Specification of my equipment",
-        "social.setup.link": "See details",
         "social.comingSoon.title": "More coming soon!",
         "social.comingSoon.description": "New social media in the future...",
         "social.comingSoon.link": "Stay tuned!",
+        "social.more.title": "More...",
+        "social.more.description": "New platforms coming soon!",
+        "social.more.link": "Coming soon",
         
         // Setup
         "setup.title": "MY SETUP",
@@ -270,6 +277,11 @@ const translations = {
         "setup.note.title": "Note:",
         "setup.note.text": "This setup allows me to comfortably create games and stream. Unity 6000.2.7f2 is a special educational version that I use for MN Sandbox development.",
         
+        "setup.performance.title": "Performance",
+        "setup.performance.gaming": "Gaming:",
+        "setup.performance.development": "Development:",
+        "setup.performance.streaming": "Streaming:",
+        
         // Party
         "party.title": "PARTY!",
         "party.subtitle": "I TOLD YOU NOT TO CLICK!",
@@ -299,6 +311,7 @@ const translations = {
         "nav.dontClick": "NICHT KLICKEN!",
         "nav.games": "Meine Spiele",
         "nav.social": "Soziale Medien",
+        "nav.setup": "Mein Setup",
         
         // Status
         "status.online": "Online",
@@ -374,12 +387,12 @@ const translations = {
         "social.youtube.description": "Gameplays, Tutorials, Entwicklung meiner Spiele",
         "social.github.description": "Quellcode meiner Projekte",
         "social.email.description": "Geschäftskontakt und Zusammenarbeit",
-        "social.setup.title": "Mein Setup",
-        "social.setup.description": "Spezifikation meiner Ausrüstung",
-        "social.setup.link": "Details anzeigen",
         "social.comingSoon.title": "Bald mehr!",
         "social.comingSoon.description": "Neue soziale Medien in Zukunft...",
         "social.comingSoon.link": "Bleib dran!",
+        "social.more.title": "Mehr...",
+        "social.more.description": "Neue Plattformen bald verfügbar!",
+        "social.more.link": "Kommt bald",
         
         // Setup
         "setup.title": "MEIN SETUP",
@@ -410,6 +423,11 @@ const translations = {
         "setup.note.title": "Hinweis:",
         "setup.note.text": "Dieses Setup ermöglicht es mir, bequem Spiele zu erstellen und zu streamen. Unity 6000.2.7f2 ist eine spezielle Bildungsversion, die ich für die Entwicklung von MN Sandbox verwende.",
         
+        "setup.performance.title": "Leistung",
+        "setup.performance.gaming": "Gaming:",
+        "setup.performance.development": "Entwicklung:",
+        "setup.performance.streaming": "Streaming:",
+        
         // Party
         "party.title": "PARTY!",
         "party.subtitle": "ICH HABE DIR GESAGT NICHT ZU KLICKEN!",
@@ -439,6 +457,7 @@ const translations = {
         "nav.dontClick": "¡NO HAGA CLIC!",
         "nav.games": "Mis Juegos",
         "nav.social": "Redes Sociales",
+        "nav.setup": "Mi Equipo",
         
         // Status
         "status.online": "En línea",
@@ -514,12 +533,12 @@ const translations = {
         "social.youtube.description": "Gameplays, tutoriales, desarrollo de mis juegos",
         "social.github.description": "Código fuente de mis proyectos",
         "social.email.description": "Contacto comercial y colaboración",
-        "social.setup.title": "Mi Equipo",
-        "social.setup.description": "Especificación de mi equipo",
-        "social.setup.link": "Ver detalles",
         "social.comingSoon.title": "¡Próximamente más!",
         "social.comingSoon.description": "Nuevas redes sociales en el futuro...",
         "social.comingSoon.link": "¡Mantente atento!",
+        "social.more.title": "Más...",
+        "social.more.description": "¡Nuevas plataformas próximamente!",
+        "social.more.link": "Próximamente",
         
         // Setup
         "setup.title": "MI EQUIPO",
@@ -549,6 +568,11 @@ const translations = {
         
         "setup.note.title": "Nota:",
         "setup.note.text": "Este equipo me permite crear juegos y transmitir cómodamente. Unity 6000.2.7f2 es una versión educativa especial que uso para el desarrollo de MN Sandbox.",
+        
+        "setup.performance.title": "Rendimiento",
+        "setup.performance.gaming": "Gaming:",
+        "setup.performance.development": "Desarrollo:",
+        "setup.performance.streaming": "Streaming:",
         
         // Party
         "party.title": "¡FIESTA!",
@@ -670,6 +694,7 @@ function setupEventListeners() {
     document.getElementById('home-btn').addEventListener('click', () => showPage('home'));
     document.getElementById('games-btn').addEventListener('click', () => showPage('games'));
     document.getElementById('social-btn').addEventListener('click', () => showPage('social'));
+    document.getElementById('setup-btn').addEventListener('click', () => showPage('setup'));
     
     // Don't Click button - starts the party!
     document.getElementById('dont-click-btn').addEventListener('click', startParty);
