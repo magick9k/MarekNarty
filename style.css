@@ -96,6 +96,36 @@
     border-left: 4px solid #aa151b;
 }
 
+/* ===== ADMIN ACCESS BUTTON ===== */
+.admin-access-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+.admin-icon-btn {
+    background: rgba(255, 170, 0, 0.2);
+    border: 2px solid #ffaa00;
+    color: #ffaa00;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.admin-icon-btn:hover {
+    background: rgba(255, 170, 0, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.3);
+}
+
 /* ===== RESET I PODSTAWY ===== */
 * {
     margin: 0;
@@ -712,6 +742,35 @@ body {
     background: rgba(255, 170, 0, 0.4);
 }
 
+.comments-btn {
+    background: rgba(136, 136, 255, 0.2);
+    color: #8888ff;
+    border: 2px solid #8888ff;
+}
+
+.comments-btn:hover {
+    background: rgba(136, 136, 255, 0.4);
+}
+
+/* ===== SEKCJA KOMENTARZY O MNIE ===== */
+.personal-comments-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #ff00aa;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    color: #ff00aa;
+    font-family: 'Orbitron', sans-serif;
+}
+
 /* ===== MODALS ===== */
 .modal {
     display: none;
@@ -755,6 +814,12 @@ body {
     background: rgba(0, 170, 255, 0.3);
     border-color: #00aaff;
     color: #00aaff;
+}
+
+.modal-header.admin {
+    background: rgba(255, 170, 0, 0.3);
+    border-color: #ffaa00;
+    color: #ffaa00;
 }
 
 .modal-header h3 {
@@ -833,6 +898,337 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 15px;
+}
+
+/* ===== MODALE KOMENTARZY ===== */
+.comments-modal {
+    max-width: 600px;
+}
+
+.comments-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comments-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    background: rgba(30, 30, 60, 0.5);
+    border-radius: 10px;
+    border: 1px solid #444488;
+}
+
+.comment-item {
+    background: rgba(40, 40, 80, 0.6);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #00aaff;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+.avatar-small {
+    width: 30px;
+    height: 30px;
+    background: #00aaff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #8888ff;
+}
+
+.comment-content {
+    line-height: 1.5;
+    color: #ccccff;
+}
+
+.comment-game {
+    font-size: 11px;
+    color: #ffaa00;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.add-comment {
+    background: rgba(30, 30, 60, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #00ff88;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#comment-nick,
+#personal-comment-nick {
+    flex: 1;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #444488;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Oxanium', sans-serif;
+}
+
+#comment-nick:focus,
+#personal-comment-nick:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+#comment-text,
+#personal-comment-text {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #444488;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Oxanium', sans-serif;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+#comment-text:focus,
+#personal-comment-text:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+.comment-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ff88, #0088ff);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(136, 136, 255, 0.2);
+    color: #8888ff;
+    border: 2px solid #8888ff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: rgba(136, 136, 255, 0.4);
+}
+
+/* ===== MODAL ADMINA ===== */
+.admin-modal {
+    max-width: 800px;
+}
+
+.admin-section {
+    margin-bottom: 30px;
+}
+
+.admin-section h4 {
+    color: #00ff88;
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-btn {
+    background: rgba(136, 136, 255, 0.2);
+    border: 2px solid #8888ff;
+    color: #8888ff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.admin-btn:hover {
+    background: rgba(136, 136, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background: rgba(255, 0, 100, 0.2);
+    border-color: #ff0064;
+    color: #ff0064;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 0, 100, 0.4);
+}
+
+.admin-comments-list {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 15px;
+    background: rgba(20, 20, 40, 0.7);
+    border-radius: 10px;
+    border: 1px solid #444488;
+}
+
+.admin-comment-item {
+    background: rgba(40, 40, 80, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #ff0064;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background: rgba(255, 0, 100, 0.2);
+    border: 1px solid #ff0064;
+    color: #ff0064;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.delete-btn:hover {
+    background: rgba(255, 0, 100, 0.4);
+}
+
+/* ===== MODAL LOGOWANIA ===== */
+.login-modal {
+    max-width: 500px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #00ff88;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#admin-password,
+#admin-secret-key {
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #444488;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Oxanium', sans-serif;
+}
+
+#admin-password:focus,
+#admin-secret-key:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+.login-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.login-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(30, 30, 60, 0.5);
+    border-radius: 10px;
+    border: 1px solid #444488;
+}
+
+.login-info p {
+    color: #8888ff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* ===== SOCIAL PAGE ===== */
@@ -1466,6 +1862,14 @@ body {
         padding: 8px 15px;
         font-size: 13px;
     }
+    
+    .game-footer {
+        flex-wrap: wrap;
+    }
+    
+    .game-btn {
+        min-width: 120px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1523,6 +1927,17 @@ body {
     .performance-label {
         width: 100px;
         font-size: 14px;
+    }
+    
+    .admin-access-btn {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .admin-icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
 
@@ -1583,5 +1998,19 @@ body {
     .performance-value {
         text-align: right;
         width: 100%;
+    }
+    
+    .game-footer {
+        flex-direction: column;
+    }
+    
+    .game-btn {
+        width: 100%;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
     }
 }
