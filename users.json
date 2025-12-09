@@ -1,10 +1,97 @@
-{
-  "MarekNarty": {
-    "password": "MarekNarty2012MarcusSchie",
-    "isAdmin": true,
-    "email": "mareknartymngame@gmail.com",
-    "createdAt": "2023-01-01T00:00:00.000Z",
-    "secretQuestion": "Jakie jest moje imię?",
-    "secretAnswer": "Marcus"
-  }
+// Funkcja do tworzenia/inicjalizacji users.json jeśli nie istnieje
+async function initializeUsersFile() {
+    try {
+        const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/users.json`;
+        const headers = GITHUB_TOKEN ? {
+            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github.v3+json'
+        } : {};
+        
+        const response = await fetch(url, { headers });
+        
+        if (response.status === 404) {
+            // Plik nie istnieje - stwórz go
+            console.log('Plik users.json nie istnieje - tworzę...');
+            
+            if (!GITHUB_TOKEN) {
+                console.warn('Brak tokena - nie mogę stworzyć pliku users.json');
+                return false;
+            }
+            
+            // Podstawowy użytkownik admin
+            const initialUsers = {
+                "Admin": {
+                    "password": "admin123",
+                    "isAdmin": true,
+                    "createdAt": new Date().toISOString(),
+                    "secretQuestion": "Jaki jest Twój ulubiony kolor?",
+                    "secretAnswer": "niebieski"
+                }
+            };
+            
+            const content = JSON.stringify(initialUsers, null, 2);
+            const contentBase64 = btoa(unescape(encodeURIComponent(content)));
+            
+            const body = {
+                message: "Inicjalizacja pliku users.json",
+                content: contentBase64,
+                branch: "main"
+            };
+            
+            const createResponse = await fetch(url, {
+                method: 'PUT',
+                headers: headers,
+                body: JSON.stringify(body)
+            });
+            
+            if (createResponse.ok) {
+                console.log('Plik users.json został utworzony!');
+                return true;
+            }
+        }
+        
+        return false;
+    } catch (error) {
+        console.error('Błąd inicjalizacji users.json:', error);
+        return false;
+    }
+}
+
+// Modyfikuj funkcję loadUsers:
+async function loadUsers() {
+    try {
+        const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/users.json`;
+        const headers = GITHUB_TOKEN ? {
+            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github.v3+json'
+        } : {};
+        
+        const response = await fetch(url, { headers });
+        
+        if (response.ok) {
+            const data = await response.json();
+            const content = atob(data.content.replace(/\n/g, ''));
+            allUsers = JSON.parse(content);
+            console.log('Załadowano użytkowników:', Object.keys(allUsers).length);
+            localStorage.setItem('mnstudio_users_backup', content);
+        } else if (response.status === 404) {
+            // Plik nie istnieje
+            console.log('Plik users.json nie istnieje');
+            
+            // Spróbuj zainicjalizować (tylko jeśli masz token)
+            if (GITHUB_TOKEN) {
+                await initializeUsersFile();
+                // Spróbuj ponownie załadować
+                setTimeout(loadUsers, 1000);
+            } else {
+                // Bez tokena - użyj lokalnego backupu
+                loadFromLocal();
+            }
+        } else {
+            loadFromLocal();
+        }
+    } catch (error) {
+        console.error('Błąd ładowania:', error);
+        loadFromLocal();
+    }
 }
