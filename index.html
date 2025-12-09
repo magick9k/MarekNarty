@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Schie / Marek Narty - MNGame Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Oxanium:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-text">MNGame</span>
+                <span class="logo-subtext">Studio</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-text">Ładowanie strony...</div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">MNGame Studio</span>
+            </div>
+            
+            <div class="nav-menu">
+                <button class="nav-btn" id="home-btn">
+                    <i class="fas fa-home"></i>
+                    <span>Strona Główna</span>
+                </button>
+                
+                <button class="nav-btn" id="dont-click-btn">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>NIE KLIKAJ!</span>
+                </button>
+                
+                <button class="nav-btn" id="games-btn">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Moje Gry</span>
+                </button>
+                
+                <button class="nav-btn" id="social-btn">
+                    <i class="fas fa-users"></i>
+                    <span>Social Media</span>
+                </button>
+            </div>
+            
+            <div class="nav-info">
+                <div class="status-indicator">
+                    <div class="status-dot active"></div>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+            <div class="hero-section">
+                <div class="hero-background">
+                    <div class="bg-particle"></div>
+                    <div class="bg-particle"></div>
+                    <div class="bg-particle"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <div class="image-frame">
+                                <div class="avatar-placeholder">MN</div>
+                                <div class="online-badge"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <h1 class="profile-name">Marcus Schie</h1>
+                            <h2 class="profile-nick">"Marek Narty"</h2>
+                            
+                            <div class="profile-tags">
+                                <span class="tag"><i class="fas fa-birthday-cake"></i> 13 lat</span>
+                                <span class="tag"><i class="fas fa-map-marker-alt"></i> Polska</span>
+                                <span class="tag"><i class="fas fa-gamepad"></i> Game Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3><i class="fas fa-user"></i> O MNIE</h3>
+                        <div class="about-content">
+                            <p>Cześć! Jestem Marcus, ale w internecie znany jestem jako <strong>Marek Narty</strong>. Mam 13 lat i od niedawna tworzę gry pod szyldem <strong>MNGame Studio</strong>.</p>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-heart"></i> Moje ulubione gry:</h4>
+                                <div class="games-list">
+                                    <span class="game-tag">SCP: Secret Laboratory</span>
+                                    <span class="game-tag">Five Nights at Freddy's</span>
+                                    <span class="game-tag">Grand Theft Auto V</span>
+                                    <span class="game-tag">Garry's Mod</span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-code"></i> Co tworzę:</h4>
+                                <p>Obecnie pracuję nad dwoma projektami:</p>
+                                <ul>
+                                    <li><strong>FNUF: Ultimate Fear</strong> - horror inspirowany FNAF</li>
+                                    <li><strong>MN Sandbox</strong> - sandbox inspirowany Garry's Mod</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="motivation-box">
+                                <i class="fas fa-quote-left"></i>
+                                <p>Gram w gry odkąd pamiętam, a teraz sam je tworzę. To moja pasja i chcę się nią dzielić!</p>
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Page -->
+        <section id="games-page" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-gamepad"></i> MOJE GRY</h2>
+                <p class="page-subtitle">Projekty nad którymi pracuję</p>
+            </div>
+            
+            <div class="games-grid">
+                <!-- FNUF Game -->
+                <div class="game-card">
+                    <div class="game-header fnuf">
+                        <div class="game-icon">
+                            <i class="fas fa-ghost"></i>
+                        </div>
+                        <div class="game-title">
+                            <h3>FNUF: Ultimate Fear</h3>
+                            <span class="game-status">W TRAKCIE ROZWOJU</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-content">
+                        <div class="game-description">
+                            <p><strong>FNUF (Five Nights at Ultimate Fear)</strong> to horror survival inspirowany serią Five Nights at Freddy's.</p>
+                            <ul class="game-features">
+                                <li><i class="fas fa-check"></i> System kamer i monitoringu</li>
+                                <li><i class="fas fa-check"></i> 5 unikalnych animatroników</li>
+                                <li><i class="fas fa-check"></i> System energii i zasilania</li>
+                                <li><i class="fas fa-check"></i> Różne poziomy trudności</li>
+                                <li><i class="fas fa-check"></i> Tryb minigier</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="game-screenshot">
+                            <div class="screenshot-placeholder fnuf-preview">
+                                <div class="placeholder-text">FNUF<br>Ultimate Fear</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-footer">
+                        <button class="game-btn info-btn" onclick="showGameInfo('fnuf')">
+                            <i class="fas fa-info-circle"></i> Informacje
+                        </button>
+                        <button class="game-btn play-btn" onclick="window.open('https://magick9k.github.io/fnuf/', '_blank')">
+                            <i class="fas fa-play"></i> Przejdź do strony
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- MN Sandbox Game -->
+                <div class="game-card">
+                    <div class="game-header sandbox">
+                        <div class="game-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="game-title">
+                            <h3>MN Sandbox</h3>
+                            <span class="game-status">WCZESNY DOSTĘP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-content">
+                        <div class="game-description">
+                            <p><strong>MN Sandbox</strong> to gra sandbox inspirowana Garry's Mod. Twórz, eksploruj i baw się bez ograniczeń!</p>
+                            <ul class="game-features">
+                                <li><i class="fas fa-check"></i> Otwarty świat do eksploracji</li>
+                                <li><i class="fas fa-check"></i> Narzędzia do budowania</li>
+                                <li><i class="fas fa-check"></i> Fizyka Ragdoll</li>
+                                <li><i class="fas fa-check"></i> Tryb wieloosobowy</li>
+                                <li><i class="fas fa-check"></i> Własne skrypty i mody</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="game-screenshot">
+                            <div class="screenshot-placeholder sandbox-preview">
+                                <div class="placeholder-text">MN<br>Sandbox</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-footer">
+                        <button class="game-btn info-btn" onclick="showGameInfo('sandbox')">
+                            <i class="fas fa-info-circle"></i> Informacje
+                        </button>
+                        <button class="game-btn download-btn" onclick="window.open('https://mega.nz/folder/KU81yQ6J#deJcN-jt7ykokHKPwcT7oQ', '_blank')">
+                            <i class="fas fa-download"></i> Pobierz
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game Info Modals -->
+            <div id="fnuf-info-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header fnuf">
+                        <h3><i class="fas fa-ghost"></i> FNUF: Ultimate Fear</h3>
+                        <button class="close-modal" onclick="closeModal('fnuf')">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Opis gry</h4>
+                            <p>FNUF to fanowski horror survival inspirowany kultową serią Five Nights at Freddy's. Wcielasz się w strażnika nocnego w kompleksie Ultimate Fear, gdzie musisz przetrwać do 6 rano, pilnując drzwi, oszczędzając energię i monitorując ruchy animatroników przez system kamer.</p>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h4><i class="fas fa-star"></i> Kluczowe funkcje</h4>
+                            <ul>
+                                <li><strong>12 kamer</strong> do monitorowania całego kompleksu</li>
+                                <li><strong>5 unikalnych animatroników</strong> z różnymi wzorcami AI</li>
+                                <li><strong>System energii</strong> - zarządzaj zasilaniem</li>
+                                <li><strong>Różne noce</strong> o rosnącej trudności</li>
+                                <li><strong>Minigry</strong> i dodatkowe tryby</li>
+                                <li><strong>Pełne sterowanie klawiaturą</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Technologie</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Web Audio API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="modal-btn play-btn" onclick="window.open('https://magick9k.github.io/fnuf/', '_blank')">
+                            <i class="fas fa-play"></i> Zagraj w FNUF
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="sandbox-info-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header sandbox">
+                        <h3><i class="fas fa-cubes"></i> MN Sandbox</h3>
+                        <button class="close-modal" onclick="closeModal('sandbox')">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Opis gry</h4>
+                            <p>MN Sandbox to gra sandbox inspirowana Garry's Mod, która daje ci pełną swobodę tworzenia i eksploracji. Buduj niesamowite konstrukcje, eksperymentuj z fizyką, twórz własne skrypty i baw się z przyjaciółmi w trybie wieloosobowym.</p>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h4><i class="fas fa-star"></i> Kluczowe funkcje</h4>
+                            <ul>
+                                <li><strong>Otwarty świat</strong> bez ograniczeń</li>
+                                <li><strong>Zaawansowane narzędzia budowania</strong></li>
+                                <li><strong>Fizyka Ragdoll</strong> i przedmioty interaktywne</li>
+                                <li><strong>Tryb wieloosobowy</strong> (w planach)</li>
+                                <li><strong>System skryptów Lua</strong></li>
+                                <li><strong>Wsparcie dla modów</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Uwaga</h4>
+                            <p>Gra jest w <strong>fazie wczesnego dostępu</strong>. Niektóre funkcje mogą nie działać poprawnie. Wszelkie błędy proszę zgłaszać na Discordzie.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="modal-btn download-btn" onclick="window.open('https://mega.nz/folder/KU81yQ6J#deJcN-jt7ykokHKPwcT7oQ', '_blank')">
+                            <i class="fas fa-download"></i> Pobierz MN Sandbox
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Page -->
+        <section id="social-page" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-users"></i> SOCIAL MEDIA</h2>
+                <p class="page-subtitle">Gdzie mnie znajdziesz</p>
+            </div>
+            
+            <div class="social-grid">
+                <!-- Discord -->
+                <a href="https://discord.gg/qVRYthYAQM" target="_blank" class="social-card discord">
+                    <div class="social-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="social-info">
+                        <h3>Discord</h3>
+                        <p>Dołącz do społeczności, rozmawiaj o grach, zgłaszaj błędy</p>
+                        <span class="social-link">discord.gg/qVRYthYAQM</span>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                
+                <!-- YouTube 1 -->
+                <a href="https://www.youtube.com/@MarekNarty" target="_blank" class="social-card youtube">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="social-info">
+                        <h3>YouTube (Marek Narty)</h3>
+                        <p>Gameplaye, poradniki, rozwój moich gier</p>
+                        <span class="social-link">youtube.com/@MarekNarty</span>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                
+                <!-- YouTube 2 -->
+                <a href="https://www.youtube.com/@MarekNarty" target="_blank" class="social-card youtube">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="social-info">
+                        <h3>YouTube (Marek Narty)</h3>
+                        <p>Drugi kanał - dodatkowe materiały</p>
+                        <span class="social-link">youtube.com/@MarekNarty</span>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                
+                <!-- GitHub -->
+                <a href="https://github.com/Magick9k" target="_blank" class="social-card github">
+                    <div class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="social-info">
+                        <h3>GitHub</h3>
+                        <p>Kod źródłowy moich projektów</p>
+                        <span class="social-link">github.com/Magick9k</span>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Email -->
+                <div class="social-card email">
+                    <div class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="social-info">
+                        <h3>Email</h3>
+                        <p>Kontakt biznesowy i współpraca</p>
+                        <span class="social-link">mareknarty@email.com</span>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-copy" onclick="copyEmail()"></i>
+                    </div>
+                </div>
+                
+                <!-- Future Social -->
+                <div class="social-card coming-soon">
+                    <div class="social-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="social-info">
+                        <h3>Wkrótce więcej!</h3>
+                        <p>Nowe social media w przyszłości...</p>
+                        <span class="social-link">Stay tuned!</span>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Don't Click Party Screen -->
+    <div id="party-screen" class="party-hidden">
+        <div class="party-overlay"></div>
+        
+        <div class="party-content">
+            <div class="party-header">
+                <h1 class="party-title">
+                    <span class="party-text">🎉 IMPREZA! 🎉</span>
+                </h1>
+                <div class="party-subtitle">MÓWIŁEM ŻEBY NIE KLIKAĆ!</div>
+            </div>
+            
+            <div class="party-controls">
+                <button class="party-btn" id="more-chaos-btn">
+                    <i class="fas fa-plus"></i> WIĘCEJ CHAOSU!
+                </button>
+                <button class="party-btn" id="stop-party-btn">
+                    <i class="fas fa-stop"></i> STOP IMPREZIE
+                </button>
+            </div>
+            
+            <div class="party-stats">
+                <div class="stat-item">
+                    <span class="stat-label">PRZYCISKÓW:</span>
+                    <span class="stat-value" id="button-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">KOLORÓW:</span>
+                    <span class="stat-value" id="color-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">CHAOS LEVEL:</span>
+                    <span class="stat-value" id="chaos-level">0</span>
+                </div>
+            </div>
+            
+            <div class="party-instructions">
+                <p><i class="fas fa-mouse-pointer"></i> Klikaj na przyciski!</p>
+                <p><i class="fas fa-arrows-alt"></i> Przeciągaj je!</p>
+                <p><i class="fas fa-sync-alt"></i> Rotuj kółkiem myszy!</p>
+            </div>
+        </div>
+        
+        <!-- Flying buttons will be added here by JavaScript -->
+        <div id="flying-buttons-container"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">MNGame Studio</span>
+                </div>
+                <p class="footer-slogan">Gry tworzone z pasji przez 13-letniego developera</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Szybkie linki</h4>
+                <div class="footer-links">
+                    <button class="footer-link" onclick="showPage('home')">Strona główna</button>
+                    <button class="footer-link" onclick="showPage('games')">Moje gry</button>
+                    <button class="footer-link" onclick="showPage('social')">Social Media</button>
+                    <button class="footer-link" onclick="startParty()">Nie klikaj!</button>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Informacje</h4>
+                <p><i class="fas fa-user"></i> Marcus "Marek Narty" Schie</p>
+                <p><i class="fas fa-birthday-cake"></i> 13 lat</p>
+                <p><i class="fas fa-map-marker-alt"></i> Polska</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 MNGame Studio. Wszystkie prawa zastrzeżone.</p>
+            <p class="footer-note">Strona stworzona z ❤️ przez Marcusa</p>
+        </div>
+    </footer>
+
+    <!-- Audio Elements -->
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3" preload="auto"></audio>
+    <audio id="party-sound" src="https://assets.mixkit.co/music/preview/mixkit-game-show-suspense-waiting-667.mp3" preload="auto" loop></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
