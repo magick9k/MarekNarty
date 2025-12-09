@@ -79,6 +79,11 @@
                     <i class="fas fa-users"></i>
                     <span data-i18n="nav.social">Social Media</span>
                 </button>
+                
+                <button class="nav-btn" id="setup-btn">
+                    <i class="fas fa-desktop"></i>
+                    <span data-i18n="nav.setup">Mój Setup</span>
+                </button>
             </div>
             
             <div class="nav-info">
@@ -376,21 +381,6 @@
                     </div>
                 </a>
                 
-                <!-- Setup -->
-                <a href="#" onclick="showPage('setup'); return false;" class="social-card setup">
-                    <div class="social-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <div class="social-info">
-                        <h3 data-i18n="social.setup.title">Mój Setup</h3>
-                        <p data-i18n="social.setup.description">Specyfikacja mojego sprzętu</p>
-                        <span class="social-link" data-i18n="social.setup.link">Zobacz szczegóły</span>
-                    </div>
-                    <div class="social-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                
                 <!-- GitHub -->
                 <a href="https://github.com/Magick9k" target="_blank" class="social-card github">
                     <div class="social-icon">
@@ -433,6 +423,21 @@
                     </div>
                     <div class="social-arrow">
                         <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+                
+                <!-- Empty card for future -->
+                <div class="social-card coming-soon">
+                    <div class="social-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="social-info">
+                        <h3 data-i18n="social.more.title">Więcej...</h3>
+                        <p data-i18n="social.more.description">Nowe platformy wkrótce!</p>
+                        <span class="social-link" data-i18n="social.more.link">Coming soon</span>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-rocket"></i>
                     </div>
                 </div>
             </div>
@@ -497,6 +502,33 @@
                     
                     <div class="setup-note">
                         <p><i class="fas fa-info-circle"></i> <strong data-i18n="setup.note.title">Informacja:</strong> <span data-i18n="setup.note.text">Ten setup pozwala mi komfortowo tworzyć gry i streamować. Unity 6000.2.7f2 to specjalna wersja edukacyjna, z której korzystam do rozwoju MN Sandbox.</span></p>
+                    </div>
+                    
+                    <div class="setup-performance">
+                        <h4><i class="fas fa-chart-line"></i> <span data-i18n="setup.performance.title">Wydajność</span></h4>
+                        <div class="performance-grid">
+                            <div class="performance-item">
+                                <div class="performance-label" data-i18n="setup.performance.gaming">Gaming:</div>
+                                <div class="performance-bar">
+                                    <div class="performance-fill" style="width: 75%"></div>
+                                </div>
+                                <div class="performance-value">75%</div>
+                            </div>
+                            <div class="performance-item">
+                                <div class="performance-label" data-i18n="setup.performance.development">Development:</div>
+                                <div class="performance-bar">
+                                    <div class="performance-fill" style="width: 85%"></div>
+                                </div>
+                                <div class="performance-value">85%</div>
+                            </div>
+                            <div class="performance-item">
+                                <div class="performance-label" data-i18n="setup.performance.streaming">Streaming:</div>
+                                <div class="performance-bar">
+                                    <div class="performance-fill" style="width: 60%"></div>
+                                </div>
+                                <div class="performance-value">60%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -567,6 +599,7 @@
                     <button class="footer-link" onclick="showPage('home')" data-i18n="nav.home">Strona główna</button>
                     <button class="footer-link" onclick="showPage('games')" data-i18n="nav.games">Moje gry</button>
                     <button class="footer-link" onclick="showPage('social')" data-i18n="nav.social">Social Media</button>
+                    <button class="footer-link" onclick="showPage('setup')" data-i18n="nav.setup">Mój Setup</button>
                     <button class="footer-link" onclick="startParty()" data-i18n="nav.dontClick">Nie klikaj!</button>
                 </div>
             </div>
